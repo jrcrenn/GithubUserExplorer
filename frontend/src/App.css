@@ -1,0 +1,96 @@
+/* src/App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Utilisez la hauteur de la vue (viewport) complète */
+  justify-content: space-between; /* Répartit l'espace entre les parties du haut et du bas */
+}
+
+.Search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #929292;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 24px; /* Vous pouvez ajuster la taille de la police */
+  height: 64px; /* Fixe la hauteur du header à 64px */
+}
+
+.App-main {
+  flex-grow: 1; /* Utilise tout l'espace restant */
+  padding: 20px;
+}
+
+/* Styles for user cards in the search results */
+.results {
+  max-height: 60vh; /* Limit the height of the columns to enable vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  display: flex;
+  flex-wrap: wrap; /* Allow for multiple columns */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+}
+
+/* Styles for user cards in the search results */
+.user-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 16px;
+  text-align: center;
+  width: calc(25% - 100px); /* Default width for 4 columns */
+}
+
+.user-card.small-width {
+  width: 100px;
+}
+
+.user-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.user-card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.user-card a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+/* CSS code */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  /* If you want to push the left section to the extreme left */
+  margin-right: auto;
+}
+
+.right-section {
+  /* If you want to push the right section to the extreme right */
+  margin-left: auto;
+}
+
+.center-section {
+  flex: 0 0 auto; /* Prevent center section from growing or shrinking */
+}
+
+
+
+
