@@ -6,7 +6,7 @@ interface UserCardProps {
   isSelected?: boolean;
   onCheckboxChange?: () => void;
   isEditMode?: boolean;
-  debugEditMode?: boolean; // Ajoutez cette prop pour le mode de débogage
+  debugEditMode?: boolean;
 }
 
 const UserCard: React.FC<UserCardProps> = ({
