@@ -11,17 +11,19 @@ interface UserCardProps {
 
 const UserCard: React.FC<UserCardProps> = ({
   user,
-  customClassName,
-  isSelected,
+  customClassName = '',
+  isSelected = false,
   onCheckboxChange,
-  isEditMode,
-  debugEditMode,
+  isEditMode = false,
+  debugEditMode = false,
 }) => {
+  const selectedStyle = isSelected
+    ? 'ring-2 ring-github_orange border-github_orange transition-all'
+    : '';
+
   return (
     <section
-      className={`relative shadow-lg flex flex-col justify-center items-center content-center my-3 py-3 w-100 border border-gray-600 rounded-md ${
-        isSelected ? 'ring-2 ring-github_orange border-github_orange transition-all' : ''
-      } ${customClassName || ''}`}
+      className={`relative shadow-lg flex flex-col justify-center items-center content-center my-3 py-3 w-100 border border-gray-600 rounded-md ${selectedStyle} ${customClassName}`}
     >
       {(isEditMode || debugEditMode) && (
         <input

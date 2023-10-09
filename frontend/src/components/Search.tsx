@@ -13,6 +13,20 @@ const Search: React.FC = () => {
   const [selectAllChecked, setSelectAllChecked] = useState(false);
 
   useEffect(() => {
+    const clearResults = () => {
+      setResults([]);
+    };
+
+    const handleApiError = (error: any) => {
+      if (error.response && error.response.status === 403) {
+        setError('Limite de l\'API GitHub dépassée. Veuillez patienter et réessayer plus tard.');
+      } else {
+        setError('Erreur de l\'API GitHub. Veuillez réessayer plus tard.');
+        console.error('Erreur de l\'API GitHub :', error);
+      }
+      clearResults();
+    };
+
     const search = async () => {
       if (query.trim() === '') {
         clearResults();
@@ -34,20 +48,6 @@ const Search: React.FC = () => {
     const timeoutId = setTimeout(search, 300);
     return () => clearTimeout(timeoutId);
   }, [query]);
-
-  const clearResults = () => {
-    setResults([]);
-  };
-
-  const handleApiError = (error: any) => {
-    if (error.response && error.response.status === 403) {
-      setError('Limite de l\'API GitHub dépassée. Veuillez patienter et réessayer plus tard.');
-    } else {
-      setError('Erreur de l\'API GitHub. Veuillez réessayer plus tard.');
-      console.error('Erreur de l\'API GitHub :', error);
-    }
-    clearResults();
-  };
 
   const handleCheckboxChange = (index: number) => {
     if (selectedItems.includes(index)) {
@@ -98,7 +98,7 @@ const Search: React.FC = () => {
         />
         <button
           onClick={toggleEditMode}
-          className="w-full lg:w-1/3 bg-gray-300 border border-gray-300 hover:bg-gray-400 hover:border-gray-400 mx-auto py-3 rounded-lg shadow-md shadow-gray-500 hover:scale-[1.02] transition-transform"
+          className="w-full lg:w-1/3 bg-gray-300 border border-gray-300 hover:bg-gray-400 hover:border-gray-400 mx-auto py-3 rounded-lg shadow-md shadow-gray-500 hover:scale-[1.02] transition-transform font-bold"
         >
           {isEditMode ? 'Terminer' : 'Modifier'}
         </button>
