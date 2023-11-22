@@ -16,4 +16,4 @@ Cette application React  permet aux utilisateurs de rechercher des profils d'uti
 - TypeScript
 - TailwindCSS
 
-L'application est disponible [ici](velvety-crostata-85eb97.netlify.app)
+L'application est disponible [ici](https://velvety-crostata-85eb97.netlify.app/)
