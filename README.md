@@ -1,20 +1,46 @@
-# Projet de recherche de membres GitHub
+# Getting Started with Create React App
 
-Ce projet est une application web simple permettant de rechercher des membres GitHub et de gérer les résultats de recherche. L'application comprend les fonctionnalités suivantes :
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Recherche en temps réel : L'application permet aux utilisateurs de saisir un terme de recherche dans un champ de recherche. À mesure qu'ils saisissent du texte, les résultats de la recherche sont mis à jour en temps réel en utilisant l'API GitHub.
+## Available Scripts
 
-- Affichage des Informations : Les résultats de la recherche sont affichés sous forme de cartes utilisateur. Chaque carte affiche des informations sur un membre GitHub, telles que son nom d'utilisateur, son ID, son avatar et un lien vers son profil GitHub.
+In the project directory, you can run:
 
-- Mode d'Édition : L'application propose un mode d'édition qui permet aux utilisateurs de sélectionner plusieurs membres en cochant des cases à cocher sur les cartes utilisateur. Ils peuvent ensuite effectuer des actions sur les membres sélectionnés, telles que la duplication ou la suppression.
+### `npm start`
 
-- Tests Unitaires : Le projet inclut des tests unitaires pour vérifier que les composants fonctionnent correctement. Ces tests sont exécutés à l'aide de la bibliothèque Testing Library.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Technologies utilisées
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Ce projet a été construit en utilisant les technologies suivantes :
+### `npm test`
 
-- React : Une bibliothèque JavaScript pour la construction d'interfaces utilisateur.
-- FontAwesome : Une bibliothèque d'icônes pour améliorer l'expérience utilisateur.
-- Tailwind CSS : Un framework CSS utilitaire pour styliser l'interface utilisateur de manière rapide et efficace.
-- Testing Library : Une bibliothèque de test pour écrire des tests unitaires.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
