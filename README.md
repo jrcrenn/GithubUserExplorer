@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22ae1d0c-41c2-42c4-9de9-7ccd83d687c3/deploy-status)](https://app.netlify.com/sites/velvety-crostata-85eb97/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
